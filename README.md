@@ -13,6 +13,16 @@
 ``pip install psutil``
 ``pip install pyaes``
 
+# Optional Dependencies
+- For advanced visualization
+  ``pip install seaborn``
+  ``pip install pandas``
+- For additional network analysis
+  ``pip install netifaces``
+  ``pip install dpkt``
+- For quantum computing simulation
+  ``pip install qiskit``
+
 # Key Advanced Features:
 1. Advanced Evasion Techniques
    - Polymorphic Packet Generation: AI-powered packet creation that changes structure
