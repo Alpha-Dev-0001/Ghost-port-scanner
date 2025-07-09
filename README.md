@@ -1,5 +1,18 @@
 # Ghost-port-scanner
 
+# Python Packages
+``pip install scapy``
+``pip install cryptography``
+``pip install numpy``
+``pip install tensorflow``
+``pip install sklearn``
+``pip install matplotlib``
+``pip install requests``
+``pip install socks``
+``pip install stem``
+``pip install psutil``
+``pip install pyaes``
+
 # Key Advanced Features:
 1. Advanced Evasion Techniques
    - Polymorphic Packet Generation: AI-powered packet creation that changes structure
