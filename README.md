@@ -1,76 +1,101 @@
-# Ghost-port-scanner
+# Network Scanner
 
-# Python Packages
-``pip install scapy``
-``pip install cryptography``
-``pip install numpy``
-``pip install tensorflow``
-``pip install sklearn``
-``pip install matplotlib``
-``pip install requests``
-``pip install socks``
-``pip install stem``
-``pip install psutil``
-``pip install pyaes``
+This repository contains a basic Python-based network scanner designed for educational purposes. The script allows users to scan a specified IP address for open ports within a defined range, enabling better understanding of network security.
 
-# Optional Dependencies
-- For advanced visualization
-  ``pip install seaborn``
-  ``pip install pandas``
-- For additional network analysis
-  ``pip install netifaces``
-  ``pip install dpkt``
-- For quantum computing simulation
-  ``pip install qiskit``
+## Features
 
-# Key Advanced Features:
-1. Advanced Evasion Techniques
-   - Polymorphic Packet Generation: AI-powered packet creation that changes structure
-   - IP Spoofing: 50,000+ decoy IPs to mask source
-   - MAC Address Randomization: Spoofs hardware addresses
-   - Protocol Switching: Randomly selects between SYN, UDP, ICMP, HTTP
-   - Fragmentation: 70% packet fragmentation rate
-   - Timing Jitter: Random delays to avoid pattern detection
-2. Multi-Layer Anonymity
-   - Tor Network: Routes through multiple countries
-   - Proxy Rotation: SOCKS5 and HTTP proxy support
-   - Distributed Scanning: Multi-node scanning capability
-   - Memory Wiping: Automatic cleanup of sensitive data
-3. Intelligent Activity Monitoring
-   - Real-time Traffic Analysis: HTTP, DNS, connection, bandwidth monitoring
-   - Statistical Analysis: Success/error rates, protocol distribution
-   - Visualization: Graphical representation of network activity
-   - Anomaly Detection: Machine learning-based pattern recognition
-4. Cryptographic Protections
-   - AES-256 Encryption: For all communications
-   - Quantum-Resistant Keys: Future-proof encryption
-   - Steganography: Hides data within legitimate traffic
-   - Fernet Encryption: For secure report generation
-5. Professional Reporting
-   - Comprehensive Analysis: Activity, performance, security insights
-   - Visual Data: Charts and graphs of network behavior
-   - Encrypted Reports: Secure storage of findings
-   - Session Tracking: Unique identifiers for each scan
-# Ethical Usage Requirements:
+- **Single Host Scanning**: Scan a specific IP address for open ports.
+- **Port Range Customization**: Define the range of ports to scan.
+- **Multithreaded Scanning**: Speeds up the scan process by scanning multiple ports simultaneously.
+- **Lightweight and Simple**: Easy-to-read and beginner-friendly Python code.
 
-This tool includes several safeguards to ensure ethical use:
+---
 
-1.Authorization Verification: Designed for authorized security testing only
-2.Comprehensive Logging: All activities are recorded for accountability
-3.Legal Compliance: Built with industry best practices for penetration testing
-4.Professional Reporting: Detailed documentation of findings for remediation
-5.Educational Purpose: Includes documentation for learning security testing
+## Disclaimer
+This script is intended for **educational use only**. Scanning devices or networks without proper authorization is illegal and unethical. Always obtain explicit permission before using this tool on any system.
 
-# Usage:
+---
 
-# Basic adaptive scan with high evasion
-``python security_testing_framework.py 8.8.8.8 1-1024 adaptive high``
+## Prerequisites
 
-# DNS tunneling scan with activity monitoring
-``python security_testing_framework.py example.com 80,443,53 dns high``
+Ensure the following before running the script:
 
-# Slow scan with maximum stealth
-``python security_testing_framework.py target.com 1-10000 adaptive high --slow``
+- **Python 3.x** installed on your system.
 
-# Distributed scan with all features
-``python security_testing_framework.py target.com 1-10000 adaptive high --distributed --quantum --ai``
+---
+
+## Usage
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Alpha-Dev-0001/Ghost-port-scanner.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Ghost-port-scanner
+   ```
+
+3. Run the `network_scanner.py` script:
+   ```bash
+   python network_scanner.py
+   ```
+
+4. Enter the required inputs as prompted:
+   - **Target Host**: IP address or hostname of the target machine (e.g., `192.168.1.1`).
+   - **Starting Port**: The first port in the range to scan (e.g., `1`).
+   - **Ending Port**: The last port in the range to scan (e.g., `1024`).
+
+Example:
+
+- To scan the target `192.168.1.1` for open ports between `1` and `1024`:
+  ```bash
+  python network_scanner.py
+  ```
+  Enter inputs as:
+  ```
+  Target Host: 192.168.1.1
+  Starting Port: 1
+  Ending Port: 1024
+  ```
+
+---
+
+## Example Output
+
+When the script finds open ports, it displays results like this:
+
+```plaintext
+[Scanning Host: 192.168.1.1] Ports 1-1024
+[+] Host: 192.168.1.1, Port: 22 is OPEN
+[+] Host: 192.168.1.1, Port: 80 is OPEN
+[+] Host: 192.168.1.1, Port: 443 is OPEN
+```
+
+---
+
+## Limitations and Notes
+
+- **Accuracy**: The accuracy of the scan is affected by firewalls or network filters. Some open ports might appear closed if they're blocked by a firewall.
+- **Scan Speed**: The script uses multithreading to improve scanning speed, but higher port ranges may still take time.
+- **Permission Required**: Ensure you are legally authorized to scan the target host.
+
+---
+
+## Ethical Usage
+
+- **Authorization**: Only use this tool on networks or devices that you own or have explicit permission to test.
+- **Educational Purpose**: This tool is for learning and understanding port scanning techniques.
+- **Responsibility**: The creator is not liable for any misuse of this tool.
+
+---
+
+## Contributing
+
+If you'd like to contribute to the development or enhancement of this tool, feel free to submit a pull request or open an issue in the repository.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
